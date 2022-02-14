@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %> 
+
+<h1>COMPOSE</h1>
+<p>
+    <form action="/compose" method="post">
+        <div class="form-group">
+          <label for="inputTitle">Title</label>
+          <input type=text" name="newTitle" class="form-control" id="inputTitle" aria-describedby="titleHelp" placeholder="Enter Title">
+          <small id="titleHelp" class="form-text text-muted">Give a wonderful name to your Post.</small>
+        </div>
+        <div class="form-group">
+          <label for="inputPost">Post</label>
+          <textarea name="newPost" id="inputPost" class="form-control" placeholder="Type your post here" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Publish</button>
+      </form>
+</p>
+<%- include("partials/footer.ejs") %> 
