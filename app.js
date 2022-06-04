@@ -49,11 +49,9 @@ const atlasDB = `mongodb+srv://ashwani:${process.env.MONGODB_PASS}@cluster0.lete
 
 // Connect to database
 mongoose
-  .connect(localDB || atlasDB)
+  .connect(atlasDB)
   .then(() => {
-    localDB
-      ? console.log("Successfully connected to local mongoDB")
-      : console.log("Successfully connected to atlas mongoDB");
+    console.log("Successfully connected to mongoDB");
   })
   .catch((err) => console.log(err));
 
